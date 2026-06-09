@@ -1,0 +1,131 @@
+0 verbose cli /home/engine/.nvm/versions/node/v24.16.0/bin/node /home/engine/.nvm/versions/node/v24.16.0/bin/npm
+1 info using npm@11.13.0
+2 info using node@v24.16.0
+3 silly config load:file:/home/engine/.nvm/versions/node/v24.16.0/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/agent-lead/.npmrc
+5 silly config load:file:/home/engine/.nvm/versions/node/v24.16.0/etc/npmrc
+6 verbose title npm install lucide-react framer-motion clsx tailwind-merge
+7 verbose argv "install" "lucide-react" "framer-motion" "clsx" "tailwind-merge"
+8 verbose logfile logs-max:10 dir:/home/agent-lead/.npm/_logs/2026-06-09T06_46_06_831Z-
+9 verbose logfile /home/agent-lead/.npm/_logs/2026-06-09T06_46_06_831Z-debug-0.log
+10 silly logfile done cleaning log files
+11 silly packumentCache heap:3298820096 maxSize:824705024 maxEntrySize:412352512
+12 silly idealTree buildDeps
+13 silly fetch manifest lucide-react@*
+14 silly packumentCache full:https://registry.npmjs.org/lucide-react cache-miss
+15 http fetch GET 200 https://registry.npmjs.org/lucide-react 1357ms (cache miss)
+16 silly packumentCache full:https://registry.npmjs.org/lucide-react set size:undefined disposed:false
+17 silly fetch manifest react@^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+18 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+19 http fetch GET 200 https://registry.npmjs.org/react 1336ms (cache miss)
+20 silly packumentCache full:https://registry.npmjs.org/react set size:undefined disposed:false
+21 silly fetch manifest framer-motion@*
+22 silly packumentCache full:https://registry.npmjs.org/framer-motion cache-miss
+23 http fetch GET 200 https://registry.npmjs.org/framer-motion 259ms (cache miss)
+24 silly packumentCache full:https://registry.npmjs.org/framer-motion set size:undefined disposed:false
+25 silly fetch manifest @emotion/is-prop-valid@*
+26 silly packumentCache full:https://registry.npmjs.org/@emotion%2fis-prop-valid cache-miss
+27 http fetch GET 200 https://registry.npmjs.org/@emotion%2fis-prop-valid 82ms (cache miss)
+28 silly packumentCache full:https://registry.npmjs.org/@emotion%2fis-prop-valid set size:undefined disposed:false
+29 silly fetch manifest react@^18.0.0 || ^19.0.0
+30 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+31 http cache https://registry.npmjs.org/react 24ms (cache hit)
+32 silly packumentCache full:https://registry.npmjs.org/react set size:6693019 disposed:false
+33 silly fetch manifest react-dom@^18.0.0 || ^19.0.0
+34 silly packumentCache full:https://registry.npmjs.org/react-dom cache-miss
+35 http fetch GET 200 https://registry.npmjs.org/react-dom 258ms (cache miss)
+36 silly packumentCache full:https://registry.npmjs.org/react-dom set size:undefined disposed:false
+37 silly fetch manifest clsx@*
+38 silly packumentCache full:https://registry.npmjs.org/clsx cache-miss
+39 http fetch GET 200 https://registry.npmjs.org/clsx 58ms (cache miss)
+40 silly packumentCache full:https://registry.npmjs.org/clsx set size:undefined disposed:false
+41 silly fetch manifest tailwind-merge@*
+42 silly packumentCache full:https://registry.npmjs.org/tailwind-merge cache-miss
+43 http fetch GET 200 https://registry.npmjs.org/tailwind-merge 100ms (cache miss)
+44 silly packumentCache full:https://registry.npmjs.org/tailwind-merge set size:undefined disposed:false
+45 silly placeDep ROOT clsx@2.1.1 OK for:  want: *
+46 silly placeDep ROOT framer-motion@12.40.0 OK for:  want: *
+47 silly placeDep ROOT lucide-react@1.17.0 OK for:  want: *
+48 silly placeDep ROOT react@19.2.7 OK for: lucide-react@1.17.0 want: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+49 silly placeDep ROOT tailwind-merge@3.6.0 OK for:  want: *
+50 silly fetch manifest tslib@^2.4.0
+51 silly packumentCache full:https://registry.npmjs.org/tslib cache-miss
+52 http fetch GET 200 https://registry.npmjs.org/tslib 65ms (cache miss)
+53 silly packumentCache full:https://registry.npmjs.org/tslib set size:undefined disposed:false
+54 silly fetch manifest motion-dom@^12.40.0
+55 silly packumentCache full:https://registry.npmjs.org/motion-dom cache-miss
+56 http fetch GET 200 https://registry.npmjs.org/motion-dom 61ms (cache miss)
+57 silly packumentCache full:https://registry.npmjs.org/motion-dom set size:undefined disposed:false
+58 silly fetch manifest motion-utils@^12.39.0
+59 silly packumentCache full:https://registry.npmjs.org/motion-utils cache-miss
+60 http fetch GET 200 https://registry.npmjs.org/motion-utils 57ms (cache miss)
+61 silly packumentCache full:https://registry.npmjs.org/motion-utils set size:undefined disposed:false
+62 silly placeDep ROOT motion-dom@12.40.0 OK for: framer-motion@12.40.0 want: ^12.40.0
+63 silly placeDep ROOT motion-utils@12.39.0 OK for: framer-motion@12.40.0 want: ^12.39.0
+64 silly placeDep ROOT tslib@2.8.1 OK for: framer-motion@12.40.0 want: ^2.4.0
+65 silly reify moves {}
+66 silly audit bulk request {
+66 silly audit   autoprefixer: [ '10.5.0' ],
+66 silly audit   'baseline-browser-mapping': [ '2.10.34' ],
+66 silly audit   browserslist: [ '4.28.2' ],
+66 silly audit   'caniuse-lite': [ '1.0.30001797' ],
+66 silly audit   'electron-to-chromium': [ '1.5.369' ],
+66 silly audit   escalade: [ '3.2.0' ],
+66 silly audit   'fraction.js': [ '5.3.4' ],
+66 silly audit   nanoid: [ '3.3.12' ],
+66 silly audit   'node-releases': [ '2.0.47' ],
+66 silly audit   picocolors: [ '1.1.1' ],
+66 silly audit   postcss: [ '8.5.15' ],
+66 silly audit   'postcss-value-parser': [ '4.2.0' ],
+66 silly audit   'source-map-js': [ '1.2.1' ],
+66 silly audit   tailwindcss: [ '4.3.0' ],
+66 silly audit   'update-browserslist-db': [ '1.2.3' ],
+66 silly audit   clsx: [ '2.1.1' ],
+66 silly audit   'framer-motion': [ '12.40.0' ],
+66 silly audit   'lucide-react': [ '1.17.0' ],
+66 silly audit   react: [ '19.2.7' ],
+66 silly audit   'tailwind-merge': [ '3.6.0' ],
+66 silly audit   'motion-dom': [ '12.40.0' ],
+66 silly audit   'motion-utils': [ '12.39.0' ],
+66 silly audit   tslib: [ '2.8.1' ]
+66 silly audit }
+67 http cache tslib@https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz 0ms (cache hit)
+68 http cache motion-utils@https://registry.npmjs.org/motion-utils/-/motion-utils-12.39.0.tgz 0ms (cache hit)
+69 http cache motion-dom@https://registry.npmjs.org/motion-dom/-/motion-dom-12.40.0.tgz 0ms (cache hit)
+70 http cache tailwind-merge@https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-3.6.0.tgz 0ms (cache hit)
+71 http cache react@https://registry.npmjs.org/react/-/react-19.2.7.tgz 0ms (cache hit)
+72 http cache lucide-react@https://registry.npmjs.org/lucide-react/-/lucide-react-1.17.0.tgz 0ms (cache hit)
+73 http cache framer-motion@https://registry.npmjs.org/framer-motion/-/framer-motion-12.40.0.tgz 0ms (cache hit)
+74 http cache clsx@https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz 0ms (cache hit)
+75 silly tarball no local data for tslib@https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz. Extracting by manifest.
+76 silly tarball no local data for motion-utils@https://registry.npmjs.org/motion-utils/-/motion-utils-12.39.0.tgz. Extracting by manifest.
+77 silly tarball no local data for motion-dom@https://registry.npmjs.org/motion-dom/-/motion-dom-12.40.0.tgz. Extracting by manifest.
+78 silly tarball no local data for tailwind-merge@https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-3.6.0.tgz. Extracting by manifest.
+79 silly tarball no local data for react@https://registry.npmjs.org/react/-/react-19.2.7.tgz. Extracting by manifest.
+80 silly tarball no local data for lucide-react@https://registry.npmjs.org/lucide-react/-/lucide-react-1.17.0.tgz. Extracting by manifest.
+81 silly tarball no local data for framer-motion@https://registry.npmjs.org/framer-motion/-/framer-motion-12.40.0.tgz. Extracting by manifest.
+82 silly tarball no local data for clsx@https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz. Extracting by manifest.
+83 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 68ms
+84 silly audit report {}
+85 http fetch GET 200 https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz 210ms (cache miss)
+86 http fetch GET 200 https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz 253ms (cache miss)
+87 http fetch GET 200 https://registry.npmjs.org/react/-/react-19.2.7.tgz 307ms (cache miss)
+88 http fetch GET 200 https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-3.6.0.tgz 381ms (cache miss)
+89 http fetch GET 200 https://registry.npmjs.org/motion-utils/-/motion-utils-12.39.0.tgz 423ms (cache miss)
+90 http fetch GET 200 https://registry.npmjs.org/framer-motion/-/framer-motion-12.40.0.tgz 729ms (cache miss)
+91 http fetch GET 200 https://registry.npmjs.org/motion-dom/-/motion-dom-12.40.0.tgz 810ms (cache miss)
+92 http fetch GET 200 https://registry.npmjs.org/lucide-react/-/lucide-react-1.17.0.tgz 2189ms (cache miss)
+93 silly ADD node_modules/tslib
+94 silly ADD node_modules/motion-utils
+95 silly ADD node_modules/motion-dom
+96 silly ADD node_modules/tailwind-merge
+97 silly ADD node_modules/react
+98 silly ADD node_modules/lucide-react
+99 silly ADD node_modules/framer-motion
+100 silly ADD node_modules/clsx
+101 verbose cwd /home/agent-lead
+102 verbose os Linux 6.1.158+
+103 verbose node v24.16.0
+104 verbose npm  v11.13.0
+105 verbose exit 0
+106 info ok

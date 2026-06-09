@@ -1,0 +1,17 @@
+0 verbose cli /home/engine/.nvm/versions/node/v24.16.0/bin/node /home/engine/.nvm/versions/node/v24.16.0/bin/npm
+1 info using npm@11.13.0
+2 info using node@v24.16.0
+3 silly config load:file:/home/engine/.nvm/versions/node/v24.16.0/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/agent-lead/.npmrc
+5 silly config load:file:/home/engine/.nvm/versions/node/v24.16.0/etc/npmrc
+6 verbose title npm run build
+7 verbose argv "run" "build"
+8 verbose logfile logs-max:10 dir:/home/agent-lead/.npm/_logs/2026-06-09T06_48_17_495Z-
+9 verbose logfile /home/agent-lead/.npm/_logs/2026-06-09T06_48_17_495Z-debug-0.log
+10 silly logfile done cleaning log files
+11 verbose cwd /home/agent-lead
+12 verbose os Linux 6.1.158+
+13 verbose node v24.16.0
+14 verbose npm  v11.13.0
+15 verbose exit 0
+16 info ok

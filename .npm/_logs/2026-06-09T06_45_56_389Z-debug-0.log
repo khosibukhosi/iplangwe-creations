@@ -1,0 +1,29 @@
+0 verbose cli /home/engine/.nvm/versions/node/v24.16.0/bin/node /home/engine/.nvm/versions/node/v24.16.0/bin/npm
+1 info using npm@11.13.0
+2 info using node@v24.16.0
+3 silly config load:file:/home/engine/.nvm/versions/node/v24.16.0/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/agent-lead/.npmrc
+5 silly config load:file:/home/engine/.nvm/versions/node/v24.16.0/etc/npmrc
+6 verbose title npm create vite@latest . --template react
+7 verbose argv "create" "vite@latest" "." "--" "--template" "react"
+8 verbose logfile logs-max:10 dir:/home/agent-lead/.npm/_logs/2026-06-09T06_45_56_389Z-
+9 verbose logfile /home/agent-lead/.npm/_logs/2026-06-09T06_45_56_389Z-debug-0.log
+10 silly logfile done cleaning log files
+11 silly packumentCache heap:3298820096 maxSize:824705024 maxEntrySize:412352512
+12 http fetch GET 200 https://registry.npmjs.org/create-vite 168ms (cache miss)
+13 silly packumentCache heap:3298820096 maxSize:824705024 maxEntrySize:412352512
+14 verbose stack Error: canceled
+14 verbose stack     at exec (/home/engine/.nvm/versions/node/v24.16.0/lib/node_modules/npm/node_modules/libnpmexec/lib/index.js:296:19)
+14 verbose stack     at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+14 verbose stack     at async Init.execCreate (/home/engine/.nvm/versions/node/v24.16.0/lib/node_modules/npm/lib/commands/init.js:141:5)
+14 verbose stack     at async Init.exec (/home/engine/.nvm/versions/node/v24.16.0/lib/node_modules/npm/lib/commands/init.js:46:14)
+14 verbose stack     at async Npm.exec (/home/engine/.nvm/versions/node/v24.16.0/lib/node_modules/npm/lib/npm.js:193:9)
+14 verbose stack     at async module.exports (/home/engine/.nvm/versions/node/v24.16.0/lib/node_modules/npm/lib/cli/entry.js:67:5)
+15 error canceled
+16 verbose cwd /home/agent-lead
+17 verbose os Linux 6.1.158+
+18 verbose node v24.16.0
+19 verbose npm  v11.13.0
+20 verbose exit 1
+21 verbose code 1
+22 error A complete log of this run can be found in: /home/agent-lead/.npm/_logs/2026-06-09T06_45_56_389Z-debug-0.log
