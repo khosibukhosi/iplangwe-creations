@@ -1,17 +1,32 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, Send, Instagram, Facebook, Twitter } from 'lucide-react'
+import { useMutation } from "convex/react"
+import { api } from "../../convex/_generated/api"
 
 const Contact = () => {
   const [formStatus, setFormStatus] = useState(null)
+  const sendInquiry = useMutation(api.contact.sendInquiry)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    const formData = new FormData(e.target)
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      service: formData.get("service"),
+      details: formData.get("details"),
+    }
+
     setFormStatus('sending')
-    setTimeout(() => {
+    try {
+      await sendInquiry(data)
       setFormStatus('success')
       e.target.reset()
-    }, 1500)
+    } catch (error) {
+      console.error(error)
+      setFormStatus('error')
+    }
   }
 
   return (
@@ -77,16 +92,16 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-charcoal/40 text-[10px] uppercase tracking-widest font-bold mb-2">Full Name</label>
-                  <input type="text" required className="w-full bg-transparent border-b border-charcoal/20 py-3 focus:border-oak outline-none text-charcoal transition-colors" />
+                  <input name="name" type="text" required className="w-full bg-transparent border-b border-charcoal/20 py-3 focus:border-oak outline-none text-charcoal transition-colors" />
                 </div>
                 <div>
                   <label className="block text-charcoal/40 text-[10px] uppercase tracking-widest font-bold mb-2">Email Address</label>
-                  <input type="email" required className="w-full bg-transparent border-b border-charcoal/20 py-3 focus:border-oak outline-none text-charcoal transition-colors" />
+                  <input name="email" type="email" required className="w-full bg-transparent border-b border-charcoal/20 py-3 focus:border-oak outline-none text-charcoal transition-colors" />
                 </div>
               </div>
               <div>
                 <label className="block text-charcoal/40 text-[10px] uppercase tracking-widest font-bold mb-2">Service Needed</label>
-                <select className="w-full bg-transparent border-b border-charcoal/20 py-3 focus:border-oak outline-none text-charcoal transition-colors appearance-none">
+                <select name="service" className="w-full bg-transparent border-b border-charcoal/20 py-3 focus:border-oak outline-none text-charcoal transition-colors appearance-none">
                   <option>Custom Furniture</option>
                   <option>Kitchen Cabinetry</option>
                   <option>Interior Design</option>
@@ -96,7 +111,7 @@ const Contact = () => {
               </div>
               <div>
                 <label className="block text-charcoal/40 text-[10px] uppercase tracking-widest font-bold mb-2">Project Details</label>
-                <textarea rows="4" required className="w-full bg-transparent border-b border-charcoal/20 py-3 focus:border-oak outline-none text-charcoal transition-colors resize-none"></textarea>
+                <textarea name="details" rows="4" required className="w-full bg-transparent border-b border-charcoal/20 py-3 focus:border-oak outline-none text-charcoal transition-colors resize-none"></textarea>
               </div>
               <button
                 type="submit"
