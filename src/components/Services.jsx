@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { 
   Hammer, Paintbrush, Home, Layout, 
-  Settings, PenTool, Layers, Compass 
+  Settings, PenTool, Layers, Compass, RefreshCw
 } from 'lucide-react'
 
 const services = [
@@ -42,9 +42,14 @@ const services = [
     desc: 'Breathing new life into heirloom pieces with expert restoration techniques.'
   },
   {
+    icon: RefreshCw,
+    title: 'Wood Wellness Service',
+    desc: 'Specialized maintenance and aftercare — periodic refinishing and restoration to ensure the longevity of your timber assets.'
+  },
+  {
     icon: Settings,
     title: 'Commercial Fits',
-    desc: 'Bespoke counters, displays, and furniture for retail and hospitality.'
+    desc: 'Luxury hospitality and retail installations — bespoke counters, display units, and furniture for boutique hotels, fine-dining restaurants, and premium retail brands.'
   }
 ]
 
@@ -64,7 +69,7 @@ const Services = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-cream/10 border border-cream/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-cream/10 border border-cream/10">
           {services.map((service, i) => (
             <motion.div
               key={i}
