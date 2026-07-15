@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import { cn } from '../lib/utils'
 
-const Navbar = () => {
+const Navbar = ({ onWoodWellness }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -16,6 +16,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'About', href: '#about' },
+    { name: 'Wood Wellness', href: '#wood-wellness', onClick: onWoodWellness },
     { name: 'Services', href: '#services' },
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'Process', href: '#process' },
@@ -36,13 +37,23 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 items-center">
           {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-cream/80 hover:text-oak transition-colors text-sm uppercase tracking-widest font-medium"
-            >
-              {link.name}
-            </a>
+            link.onClick ? (
+              <button
+                key={link.name}
+                onClick={() => { link.onClick(); setIsOpen(false); }}
+                className="text-cream/80 hover:text-oak transition-colors text-sm uppercase tracking-widest font-medium"
+              >
+                {link.name}
+              </button>
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-cream/80 hover:text-oak transition-colors text-sm uppercase tracking-widest font-medium"
+              >
+                {link.name}
+              </a>
+            )
           ))}
           <a
             href="#contact"
@@ -67,15 +78,25 @@ const Navbar = () => {
         isOpen ? "translate-x-0" : "translate-x-full"
       )}>
         {navLinks.map((link) => (
-          <a
-            key={link.name}
-            href={link.href}
-            className="text-cream text-2xl font-playfair hover:text-oak transition-colors"
-            onClick={() => setIsOpen(false)}
-          >
-            {link.name}
-          </a>
-        ))}
+            link.onClick ? (
+              <button
+                key={link.name}
+                onClick={() => { link.onClick(); setIsOpen(false); }}
+                className="text-cream text-2xl font-playfair hover:text-oak transition-colors"
+              >
+                {link.name}
+              </button>
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-cream text-2xl font-playfair hover:text-oak transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </a>
+            )
+          ))}
         <a
           href="#contact"
           className="bg-oak text-charcoal px-8 py-3 font-bold uppercase tracking-widest"

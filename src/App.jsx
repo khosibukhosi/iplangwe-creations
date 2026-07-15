@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -11,15 +11,18 @@ import Blog from './components/Blog'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
+import WoodWellness from './components/WoodWellness'
 
 function App() {
+  const [woodWellnessOpen, setWoodWellnessOpen] = useState(false)
+
   return (
     <div className="relative">
-      <Navbar />
+      <Navbar onWoodWellness={() => setWoodWellnessOpen(true)} />
       <main>
         <Hero />
         <About />
-        <Services />
+        <Services onWoodWellness={() => setWoodWellnessOpen(true)} />
         <Portfolio />
         <WhyChooseUs />
         <Testimonials />
@@ -29,6 +32,7 @@ function App() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <WoodWellness isOpen={woodWellnessOpen} onClose={() => setWoodWellnessOpen(false)} />
     </div>
   )
 }

@@ -53,7 +53,7 @@ const services = [
   }
 ]
 
-const Services = () => {
+const Services = ({ onWoodWellness }) => {
   return (
     <section id="services" className="py-24 px-6 bg-charcoal text-cream">
       <div className="max-w-7xl mx-auto">
@@ -77,7 +77,10 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-10 bg-charcoal hover:bg-charcoal/50 transition-colors group cursor-default"
+              onClick={service.title === 'Wood Wellness Service' ? onWoodWellness : undefined}
+              className={`p-10 bg-charcoal hover:bg-charcoal/50 transition-colors group ${
+                service.title === 'Wood Wellness Service' ? 'cursor-pointer' : 'cursor-default'
+              }`}
             >
               <service.icon className="text-oak mb-6 group-hover:scale-110 transition-transform duration-500" size={32} strokeWidth={1.5} />
               <h3 className="text-xl font-playfair mb-4 group-hover:text-oak transition-colors">{service.title}</h3>
